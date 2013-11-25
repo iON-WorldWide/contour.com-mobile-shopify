@@ -79,7 +79,7 @@
 <script>
 jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
   if( location.country_code != "US"){
-    $('#hidePrice').hide();
+    $('.hidePrice').hide();
   }
 });
 </script>
@@ -102,7 +102,9 @@ jQuery.getJSON('http://freegeoip.net/json/?callback=?', function(location) {
 			{% unless settings.toolbar_phone == "" %}<a href="#phone" class="icon icon-phone accordion-toggle" data-toggle="collapse" data-parent="#toolbar">&nbsp;</a>{% endunless %}
 			{% unless settings.toolbar_email == "" %}<a href="#email" class="icon icon-envelope accordion-toggle" data-toggle="collapse" data-parent="#toolbar">&nbsp;</a>{% endunless %}
 			{% if shop.customer_accounts_enabled %}<a href="/account" class="icon icon-user">&nbsp;</a>{% endif %}
-			<a href="/cart" class="icon icon-shopping-cart">&nbsp;</a><a href="/cart" class="cart-total-items"><span class="badge">{{ cart.item_count }}</span></a>
+			<span class="hidePrice">
+				<a href="/cart" class="icon icon-shopping-cart">&nbsp;</a><a href="/cart" class="cart-total-items"><span class="badge">{{ cart.item_count }}</span></a>
+			</span>
 			{% if settings.main_navigation_style == "toolbar" %}
             <a href="#menu" data-toggle="collapse" data-parent="#toolbar" class="menu icon icon-reorder accordion-toggle">&nbsp;</a>
 			<nav id="menu" class="collapse">
