@@ -926,3 +926,35 @@ input#contact_email{margin-bottom:0px;width:60%;}
 .credit-cards li.cc.disc{background-position:-165px 0;}
 .credit-cards li.cc.wu{background-position:-198px 0;}
 .credit-cards li.cc.pp{background-position:-231px 0;}
+
+.description a{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: all 0.15s;
+	-moz-transition: all 0.15s;
+	transition: all 0.15s;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	margin: 0;
+	padding: 0 20px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 13px;
+	text-transform: none;
+	background: #c5d84b;
+	width: auto;
+	margin: 20px 0 20px 0;
+	webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-decoration:none;
+}
+
+.description a:hover{
+	background-color: #bdcf47;
+	color: #ffffff;
+}
+
